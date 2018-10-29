@@ -4,6 +4,6 @@ const app = express();
 const port = 10000;
 
 app.use(cors());
-app.get("/", (req, res) => res.json({ name: "cors" }));
+app.get("/test-channel", (req, res) => res.json({ name: "cors" }));
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
