@@ -1,9 +1,13 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const port = 10000;
+const requestIp = require('request-ip')
 
-// app.use(cors());
-app.get("/test-channel", (req, res) => res.json({ name: "cors" }));
+const port = 10000;
+app.use(cors());
+app.get("/", (req, res) => {
+  const clientIp = requestIp.getClientIp(req);
+  res.json({ ip: clientIp });
+});
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));

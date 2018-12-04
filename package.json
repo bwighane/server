@@ -12,7 +12,9 @@
   "dependencies": {
     "axios": "^0.18.0",
     "cors": "^2.8.4",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "express-origin": "0.0.2",
+    "request-ip": "^2.1.3"
   },
   "devDependencies": {
     "nodemon": "^1.18.4"
